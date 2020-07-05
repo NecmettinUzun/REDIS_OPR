@@ -1,4 +1,4 @@
-package main;
+package data;
 
 import java.util.Optional;
 
@@ -25,12 +25,12 @@ public enum RedisType {
 		 return this.name;
 	 }
 	 
-	 public static Optional<RedisType> getRedisType(int id) {
+	 public static RedisType getRedisType(int id) {
 		 for (RedisType redisType : RedisType.values()) {
 			if(id == redisType.getId()) {
-				return Optional.of(redisType);
+				return redisType;
 			}
 		}
-		 return Optional.empty();
+		 return null;
 	 }
 }
